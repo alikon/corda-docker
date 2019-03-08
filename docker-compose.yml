@@ -12,8 +12,9 @@ services:
       - ./corda_docker.env
     ports:
       - "10002:10002"
-      - "10003:10003"
+      - "10006:10006"
       - "10004:10004"
+      - "10046:10046"
     image: corda/node:3.3
     container_name: notary
     volumes:
@@ -32,8 +33,9 @@ services:
       - ./corda_docker.env
     ports:
       - "10012:10002"
-      - "10013:10003"
+      - "10016:10006"
       - "10014:10004"
+      - "10146:10046"
     image: corda/networkmap:3.3
     container_name: networkmap
     volumes:
@@ -50,8 +52,9 @@ services:
       - ./corda_docker.env
     ports:
       - "10022:10002"
-      - "10023:10003"
+      - "10026:10006"
       - "10024:10004"
+      - "10246:10046"
     image: corda/node:3.0
     container_name: banka
     volumes:
@@ -72,8 +75,9 @@ services:
       - ./corda_docker.env
     ports:
       - "10032:10002"
-      - "10033:10003"
+      - "10036:10006"
       - "10034:10004"
+      - "10346:10046"
     image: corda/node:3.3
     container_name: bankb
     volumes:
@@ -94,8 +98,9 @@ services:
       - ./corda_docker.env
     ports:
       - "10042:10002"
-      - "10043:10003"
+      - "10046:10006"
       - "10044:10004"
+      - "10446:10046"
     image: corda/node:3.3
     container_name: bankc
     volumes:
