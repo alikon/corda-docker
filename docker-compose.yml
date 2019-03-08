@@ -21,6 +21,7 @@ services:
       - ./nodes/notary/corda-notary.conf:/opt/corda/node.conf
       - ./plugins/:/opt/corda/plugins/
       - ./nodes/notary/certificates/:/opt/corda/certificates/
+      - ./nodes/notary/network-parameters:/opt/corda/network-parameters
 
   CordaNetworkMap:
     networks:
@@ -61,6 +62,7 @@ services:
       - ./nodes/banka/corda-banka.conf:/opt/corda/node.conf
       - ./plugins/:/opt/corda/plugins/
       - ./nodes/banka/certificates/:/opt/corda/certificates/
+      - ./nodes/banka/network-parameters:/opt/corda/network-parameters
     depends_on:
       - CordaNetworkMap
 
@@ -84,6 +86,7 @@ services:
       - ./nodes/bankb/corda-bankb.conf:/opt/corda/node.conf
       - ./plugins/:/opt/corda/plugins/
       - ./nodes/bankb/certificates/:/opt/corda/certificates/
+      - ./nodes/bankb/network-parameters:/opt/corda/network-parameters
     depends_on:
       - CordaNetworkMap
 
@@ -107,6 +110,7 @@ services:
       - ./nodes/bankc/corda-bankc.conf:/opt/corda/node.conf
       - ./plugins/:/opt/corda/plugins/
       - ./nodes/bankc/certificates/:/opt/corda/certificates/
+      - ./nodes/bankc/network-parameters:/opt/corda/network-parameters
     depends_on:
       - CordaNetworkMap
 
