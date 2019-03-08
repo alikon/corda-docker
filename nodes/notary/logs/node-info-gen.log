@@ -1,0 +1,14 @@
+2019-03-08 15:10:45,159 main WARN Unable to instantiate org.fusesource.jansi.WindowsAnsiOutputStream
+2019-03-08 15:10:45,178 main WARN Unable to instantiate org.fusesource.jansi.WindowsAnsiOutputStream
+
+   ______               __
+  / ____/     _________/ /___ _
+ / /     __  / ___/ __  / __ `/         Check your contracts carefully. The fine print
+/ /___  /_/ / /  / /_/ / /_/ /          is usually a clause for suspicion 
+\____/     /_/   \__,_/\__,_/
+
+--- Corda Open Source 3.2-corda (5ae8325) -----------------------------------------------
+
+
+Logs can be found in                    : c:\test\docker\nodi\corda-notary_node\logs
+Database connection url is              : jdbc:h2:tcp://172.16.29.51:55797/node
