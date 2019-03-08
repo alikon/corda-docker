@@ -1,0 +1,14 @@
+2019-03-08 15:10:46,528 main WARN Unable to instantiate org.fusesource.jansi.WindowsAnsiOutputStream
+2019-03-08 15:10:46,532 main WARN Unable to instantiate org.fusesource.jansi.WindowsAnsiOutputStream
+
+   ______               __
+  / ____/     _________/ /___ _
+ / /     __  / ___/ __  / __ `/         I met my bank manager yesterday and asked
+/ /___  /_/ / /  / /_/ / /_/ /          to check my balance ... he pushed me over!
+\____/     /_/   \__,_/\__,_/
+
+--- Corda Open Source 3.2-corda (5ae8325) -----------------------------------------------
+
+
+Logs can be found in                    : c:\test\docker\nodi\corda-bankb_node\logs
+Database connection url is              : jdbc:h2:tcp://172.16.29.51:55801/node
