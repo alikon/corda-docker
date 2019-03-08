@@ -15,7 +15,6 @@ The docker image is based on Alpine/OpenJDK (https://hub.docker.com/_/openjdk/)
 * `docker-compose build` - to build base Corda images for Corda Node/Networkmap/Notary
 * `docker-compose up` - to spin up all Corda containers (Nodes + Networkmap + Notary)
 * `docker exec -it banka /bin/sh` - to log in to one of the running Node containers
-* `docker exec -it networkmap /bin/sh` - to log in to the running Networkmap container
 
 ## Corda configuration
 At the moment java options are put into **corda_docker.env**. All the others are in Dockerfile/docker_compose.yml
