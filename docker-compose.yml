@@ -22,6 +22,7 @@ services:
       - ./nodes/cordapps/:/opt/corda/cordapps/
       - ./nodes/notary/certificates/:/opt/corda/certificates/
       - ./nodes/notary/network-parameters:/opt/corda/network-parameters
+      - ./nodes/notary/additional-node-infos/:/opt/corda/additional-node-infos
 
   CordaNodeA:
     networks:
@@ -44,6 +45,7 @@ services:
       - ./nodes/cordapps/:/opt/corda/cordapps/
       - ./nodes/banka/certificates/:/opt/corda/certificates/
       - ./nodes/banka/network-parameters:/opt/corda/network-parameters
+      - ./nodes/banka/additional-node-infos/:/opt/corda/additional-node-infos
 
   CordaNodeB:
     networks:
@@ -66,6 +68,7 @@ services:
       - ./nodes/cordapps/:/opt/corda/cordapps/
       - ./nodes/bankb/certificates/:/opt/corda/certificates/
       - ./nodes/bankb/network-parameters:/opt/corda/network-parameters
+      - ./nodes/bankb/additional-node-infos/:/opt/corda/additional-node-infos
 
   CordaNodeC:
     networks:
@@ -88,6 +91,7 @@ services:
       - ./nodes/cordapps/:/opt/corda/cordapps/
       - ./nodes/bankc/certificates/:/opt/corda/certificates/
       - ./nodes/bankc/network-parameters:/opt/corda/network-parameters
+      - ./nodes/bankc/additional-node-infos/:/opt/corda/additional-node-infos
 
 networks:
   corda:
