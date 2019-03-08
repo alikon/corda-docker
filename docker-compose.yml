@@ -10,7 +10,7 @@ services:
         BUILDTIME_CORDA_VERSION: 3.3
     env_file:
       - ./corda_docker.env
-     ports:
+    ports:
       - "10002:10002"
       - "10006:10006"
       - "10004:10004"
@@ -31,7 +31,7 @@ services:
         BUILDTIME_CORDA_VERSION: 3.3
     env_file:
       - ./corda_docker.env
-ports:
+    ports:
       - "10012:10002"
       - "10016:10006"
       - "10014:10004"
