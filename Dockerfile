@@ -3,7 +3,7 @@ FROM openjdk:8u151-jre-alpine
 
 # Override default value with 'docker build --build-arg BUILDTIME_CORDA_VERSION=version'
 # example: 'docker build --build-arg BUILDTIME_CORDA_VERSION=1.0.0 -t corda/node:1.0 .'
-ARG BUILDTIME_CORDA_VERSION=2.0.0
+ARG BUILDTIME_CORDA_VERSION=3.3
 ARG BUILDTIME_JAVA_OPTIONS
 
 ENV CORDA_VERSION=${BUILDTIME_CORDA_VERSION}
@@ -25,8 +25,8 @@ RUN apk upgrade --update && \
     mkdir -p /opt/corda/logs
 
 # Copy corda jar
-ADD --chown=corda:corda https://dl.bintray.com/r3/corda/net/corda/corda/${CORDA_VERSION}/corda-${CORDA_VERSION}.jar                       /opt/corda/corda.jar
-ADD --chown=corda:corda https://dl.bintray.com/r3/corda/net/corda/corda-webserver/${CORDA_VERSION}/corda-webserver-${CORDA_VERSION}.jar   /opt/corda/corda-webserver.jar
+ADD --chown=corda:corda https://dl.bintray.com/r3/corda/net/corda/corda/${CORDA_VERSION}-corda/corda-${CORDA_VERSION}-corda.jar                       /opt/corda/corda.jar
+ADD --chown=corda:corda https://dl.bintray.com/r3/corda/net/corda/corda-webserver/${CORDA_VERSION}-corda/corda-webserver-${CORDA_VERSION}-corda.jar   /opt/corda/corda-webserver.jar
 
 COPY run-corda.sh /run-corda.sh
 RUN chmod +x /run-corda.sh && \
