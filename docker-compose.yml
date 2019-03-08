@@ -19,28 +19,9 @@ services:
     container_name: notary
     volumes:
       - ./nodes/notary/corda-notary.conf:/opt/corda/node.conf
-      - ./plugins/:/opt/corda/plugins/
+      - ./nodes/cordapps/:/opt/corda/cordapps/
       - ./nodes/notary/certificates/:/opt/corda/certificates/
       - ./nodes/notary/network-parameters:/opt/corda/network-parameters
-
-  CordaNetworkMap:
-    networks:
-      - corda
-    build:
-      context: .
-      args:
-        BUILDTIME_CORDA_VERSION: 3.3
-    env_file:
-      - ./corda_docker.env
-    ports:
-      - "10012:10002"
-      - "10016:10006"
-      - "10014:10004"
-      - "10019:10009"
-    image: corda/networkmap:3.3
-    container_name: networkmap
-    volumes:
-      - ./nodes/networkmap/corda-networkmap.conf:/opt/corda/node.conf
 
   CordaNodeA:
     networks:
@@ -60,11 +41,9 @@ services:
     container_name: banka
     volumes:
       - ./nodes/banka/corda-banka.conf:/opt/corda/node.conf
-      - ./plugins/:/opt/corda/plugins/
+      - ./nodes/cordapps/:/opt/corda/cordapps/
       - ./nodes/banka/certificates/:/opt/corda/certificates/
       - ./nodes/banka/network-parameters:/opt/corda/network-parameters
-    depends_on:
-      - CordaNetworkMap
 
   CordaNodeB:
     networks:
@@ -84,11 +63,9 @@ services:
     container_name: bankb
     volumes:
       - ./nodes/bankb/corda-bankb.conf:/opt/corda/node.conf
-      - ./plugins/:/opt/corda/plugins/
+      - ./nodes/cordapps/:/opt/corda/cordapps/
       - ./nodes/bankb/certificates/:/opt/corda/certificates/
       - ./nodes/bankb/network-parameters:/opt/corda/network-parameters
-    depends_on:
-      - CordaNetworkMap
 
   CordaNodeC:
     networks:
@@ -108,11 +85,9 @@ services:
     container_name: bankc
     volumes:
       - ./nodes/bankc/corda-bankc.conf:/opt/corda/node.conf
-      - ./plugins/:/opt/corda/plugins/
+      - ./nodes/cordapps/:/opt/corda/cordapps/
       - ./nodes/bankc/certificates/:/opt/corda/certificates/
       - ./nodes/bankc/network-parameters:/opt/corda/network-parameters
-    depends_on:
-      - CordaNetworkMap
 
 networks:
   corda:
