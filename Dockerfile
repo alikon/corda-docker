@@ -37,6 +37,8 @@ RUN chmod +x /run-corda.sh && \
 EXPOSE 10002
 EXPOSE 10003
 EXPOSE 10004
+EXPOSE 10006
+EXPOSE 10009
 
 # Working directory for Corda
 WORKDIR /opt/corda
